@@ -59,14 +59,28 @@ public class Points {
             return "Current status is not gold.";
     }
 
-    public int calculateTotalPoints() {
+    public int calculateTotalPoints(Visits v) {
         //use days to calculate total n of points
+        int days = v.getDays();
+        int TP = days*1000;
+        return TP;
     }
 
-    /*public int daysMissing() {
-        if (this.getStatusNow().equals("Bronze"))
-            if (10000 - this.getTotalPoints())
+    public String daysMissing(Points ID) {
+        int points;
+        int days;
+        if (ID.getStatusNow().equals("Bronze"))
+            points = 10000 - ID.getTotalPoints();
+            days = points/100;
+        else if (ID.getStatusNow().equals("Silver"))
+            points = 50000 - ID.getTotalPoints();
+            days = points/100;
+        else if (ID.getStatusNow().equals("Gold"))
+            points = 50000 - ID.getTotalPoints();
+            days = points/100;
+        else
 
-    }*/
+        return "Customer needs to stay " + days + " days to keep their status.";
+    }
 
 }

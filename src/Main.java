@@ -22,5 +22,7 @@ public class Main {
         System.out.println(allPoints[2].getMemberId());
         System.out.println(allPoints[0].getBonusPoints());
         System.out.println(allPoints[1].getAllVisits(1));
+
+        //System.out.println(calculateTotalPoints(v4));
     }
 }
